@@ -26,4 +26,12 @@ dependencies {
   )
   testCompileOnly 'org.projectlombok:lombok:1.18.10'
   testAnnotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+  implementation(
+      "com.fasterxml.jackson.core:jackson-core:2.9.8",
+      "com.fasterxml.jackson.core:jackson-databind:2.9.8",
+      "com.fasterxml.jackson.core:jackson-annotations:2.9.8",
+      "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8"
+  )
+
 }

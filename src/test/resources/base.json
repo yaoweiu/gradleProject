@@ -1,0 +1,19 @@
+{
+  "base": {
+    "string": "string",
+    "anInt": 1,
+    "aShort": 2,
+    "aLong": 3,
+    "aFloat": 4.0,
+    "aDouble": 5.0,
+    "aBoolean": true
+  },
+  "dateTime": {
+    "date": "2020-01-01T09:00:00.000Z",
+    "duration": "PT20M",
+    "instant": "2020-01-01T09:09:00.000Z",
+    "localDate": "2020-01-01",
+    "localDateTime": "2020-01-01T09:00:00.000",
+    "zoneDateTime": "2020-01-01T09:00:00.000Z"
+  }
+}
