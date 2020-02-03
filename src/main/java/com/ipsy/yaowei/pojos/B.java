@@ -1,4 +1,8 @@
 package com.ipsy.yaowei.pojos;
 
-public class B {
+import lombok.Data;
+
+@Data
+public class B extends A {
+  private IC ic;
 }
