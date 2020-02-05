@@ -15,7 +15,9 @@ repositories {
 dependencies {
   implementation (
       "org.slf4j:slf4j-api:1.7.25",
-      "org.slf4j:slf4j-log4j12:1.7.25"
+      "org.slf4j:slf4j-log4j12:1.7.25",
+      "com.amazonaws:aws-lambda-java-log4j:1.0.0",
+
   )
   compileOnly 'org.projectlombok:lombok:1.18.10'
   annotationProcessor 'org.projectlombok:lombok:1.18.10'
@@ -26,4 +28,6 @@ dependencies {
   )
   testCompileOnly 'org.projectlombok:lombok:1.18.10'
   testAnnotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+  implementation "com.github.java-json-tools:json-schema-validator:2.2.8"
 }

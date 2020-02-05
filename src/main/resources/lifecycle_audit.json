@@ -1,0 +1,209 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "context": {
+      "id": "/properties/context"
+    },
+    "traits": {
+      "id": "/properties/traits"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "audit_user": {
+          "properties": {
+            "op_src": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/audit_user/properties/op_src"
+            },
+            "tracking_ids": {
+              "items": {
+                "type": "string",
+                "id": "/properties/payload/properties/audit_user/properties/tracking_ids/items"
+              },
+              "type": "array",
+              "id": "/properties/payload/properties/audit_user/properties/tracking_ids"
+            },
+            "username": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/audit_user/properties/username"
+            }
+          },
+          "type": "object",
+          "id": "/properties/payload/properties/audit_user"
+        },
+        "data": {
+          "properties": {
+            "cycle_id": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/data/properties/cycle_id"
+            },
+            "cycle_start_time": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/data/properties/cycle_start_time"
+            },
+            "items": {
+              "items": {
+                "properties": {
+                  "date_created": {
+                    "type": [
+                      "string"
+                    ],
+                    "id": "/properties/payload/properties/data/properties/items/items/properties/date_created"
+                  },
+                  "id": {
+                    "type": [
+                      "string"
+                    ],
+                    "id": "/properties/payload/properties/data/properties/items/items/properties/id"
+                  },
+                  "item_type": {
+                    "type": [
+                      "string"
+                    ],
+                    "id": "/properties/payload/properties/data/properties/items/items/properties/item_type"
+                  },
+                  "last_updated": {
+                    "type": [
+                      "string"
+                    ],
+                    "id": "/properties/payload/properties/data/properties/items/items/properties/last_updated"
+                  },
+                  "main_item": {
+                    "type": [
+                      "boolean"
+                    ],
+                    "id": "/properties/payload/properties/data/properties/items/items/properties/main_item"
+                  },
+                  "status": {
+                    "type": [
+                      "string"
+                    ],
+                    "id": "/properties/payload/properties/data/properties/items/items/properties/status"
+                  },
+                  "subscription_item_id": {
+                    "type": [
+                      "string"
+                    ],
+                    "id": "/properties/payload/properties/data/properties/items/items/properties/subscription_item_id"
+                  }
+                },
+                "required": [
+                  "id",
+                  "item_type",
+                  "main_item",
+                  "status",
+                  "subscription_item_id"
+                ],
+                "type": "object",
+                "id": "/properties/payload/properties/data/properties/items/items"
+              },
+              "type": "array",
+              "id": "/properties/payload/properties/data/properties/items"
+            },
+            "lifecycle_id": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/data/properties/lifecycle_id"
+            },
+            "payment_failure_count": {
+              "type": [
+                "integer"
+              ],
+              "id": "/properties/payload/properties/data/properties/payment_failure_count"
+            },
+            "program": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/data/properties/program"
+            },
+            "status": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/data/properties/status"
+            },
+            "subscription_id": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/data/properties/subscription_id"
+            },
+            "user_id": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/data/properties/user_id"
+            }
+          },
+          "required": [
+            "cycle_id",
+            "cycle_start_time",
+            "items",
+            "lifecycle_id",
+            "program",
+            "status",
+            "subscription_id"
+          ],
+          "type": "object",
+          "id": "/properties/payload/properties/data"
+        },
+        "req": {
+          "properties": {
+            "cycle": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/req/properties/cycle"
+            },
+            "payment_order_id": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/req/properties/payment_order_id"
+            },
+            "subscription_id": {
+              "type": [
+                "string"
+              ],
+              "id": "/properties/payload/properties/req/properties/subscription_id"
+            }
+          },
+          "type": "object",
+          "id": "/properties/payload/properties/req"
+        },
+        "type": {
+          "type": [
+            "string"
+          ],
+          "id": "/properties/payload/properties/type"
+        },
+        "user_id": {
+          "type": [
+            "string"
+          ],
+          "id": "/properties/payload/properties/user_id"
+        }
+      },
+      "required": [
+        "type",
+        "user_id"
+      ],
+      "id": "/properties/payload"
+    }
+  },
+  "required": [
+    "payload"
+  ]
+}
