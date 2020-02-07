@@ -9,6 +9,7 @@ version '1.0.0'
 sourceCompatibility = 1.8
 
 repositories {
+  mavenLocal()
   mavenCentral()
 }
 
@@ -26,4 +27,30 @@ dependencies {
   )
   testCompileOnly 'org.projectlombok:lombok:1.18.10'
   testAnnotationProcessor 'org.projectlombok:lombok:1.18.10'
+  implementation (
+      'io.vertx:vertx-core:3.4.2',
+      'io.vertx:vertx-web:3.4.2',
+      'io.vertx:vertx-redis-client:3.4.2',
+
+      "com.hubrick.vertx:vertx-s3-client:3.3.3"
+  )
+
+  implementation "com.ipsy:segment-core:0.1.1"
 }
+
+
+jar {
+  manifest {
+    attributes "Main-Class": "io.vertx.core.Launcher",//改为Launcher
+        "Main-Verticle": "com.ipsy.yaowei.verticles.MainVerticle"//新增Main Verticle属性，对应MainVerticle类
+  }
+
+  from {
+    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
+task run(type: JavaExec) {
+  main = "-jar"
+  args jar.archivePath
+}
+run.dependsOn build
