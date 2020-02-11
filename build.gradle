@@ -26,4 +26,6 @@ dependencies {
   )
   testCompileOnly 'org.projectlombok:lombok:1.18.10'
   testAnnotationProcessor 'org.projectlombok:lombok:1.18.10'
+  implementation 'io.vertx:vertx-core:3.4.2'
+  implementation 'io.vertx:vertx-web-client:3.4.2'
 }
