@@ -35,7 +35,8 @@ dependencies {
       "com.hubrick.vertx:vertx-s3-client:3.3.3"
   )
 
-  implementation "com.ipsy:segment-core:0.1.1"
+  implementation "com.ipsy:segment-core:0.1.0"
+  implementation("com.google.guava:guava:28.2-jre")
 }
 
 
